@@ -17,11 +17,11 @@
                 </tr>
                 <c:forEach var="employee" items="${employees}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td><c:out value="${employees.code}" /></td>
-                        <td><c:out value="${employees.name}" /></td>
+                        <td><c:out value="${employee.code}" /></td>
+                        <td><c:out value="${employee.name}" /></td>
                         <td>
                             <c:choose>
-                                <c:when test="${employees.delete_flag == 1}">
+                                <c:when test="${employee.delete_flag == 1}">
                                     （削除済み）
                                 </c:when>
                                 <c:otherwise>
